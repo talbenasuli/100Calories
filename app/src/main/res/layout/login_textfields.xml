@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/rounded_corners"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/loginTextFieldsNewAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlackText"
+        android:textAlignment="textEnd"
+        android:text="@string/register"
+        android:gravity="end" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/loginTextFieldsEmailTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_textField_email_hint"
+            android:textColorHint="@color/colorLightGrayHint"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/loginTextFieldsPasswordTextField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_textField_password_hint"
+            android:textColorHint="@color/colorLightGrayHint"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_forgot_your_password"
+            android:textColor="@color/colorLightGrayHint"
+            android:layout_gravity="end"
+            android:textAlignment="textEnd"/>
+
+        <Button
+            android:id="@+id/loginTextFieldsLoginImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorOrangeButton"
+            android:text="@string/login"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

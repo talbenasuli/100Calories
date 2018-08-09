@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">100Calories</string>
+    <string name="login_textField_email_hint">Enter Email</string>
+    <string name="login_textField_password_hint">Enter Password</string>
+    <string name="register_textField_re_password_hint">Re-Enter Password</string>
+    <string name="register_textField_Weight_hint">Your weight</string>
+    <string name="register_textField_name_hint">Your name</string>
+    <string name="register_textField_lastname_hint">Your last name</string>
+    <string name="login_forgot_your_password">forgot your password</string>
+    <string name="registerBtn">register</string>
+    <string name="login">login</string>
+    <string name="register">+ create account</string>
+    <string name="registerBack"> &lt; back </string>
+
 </resources>

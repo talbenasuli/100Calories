@@ -13,6 +13,4 @@ class Model {
     static Model getInstance() {
         return ourInstance;
     }
-
-
 }
