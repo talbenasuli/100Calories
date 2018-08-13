@@ -24,23 +24,27 @@
             android:id="@+id/loginTextFieldsEmailTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/login_textField_email_hint"
-            android:textColorHint="@color/colorLightGrayHint"
-            android:layout_marginTop="0dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:hint="@string/login_textField_email_hint"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorBlackText"
+            android:textColorHint="@color/colorLightGrayHint" />
 
         <EditText
             android:id="@+id/loginTextFieldsPasswordTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/login_textField_password_hint"
-            android:textColorHint="@color/colorLightGrayHint"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/login_textField_password_hint"
+            android:inputType="textPassword"
+            android:textColor="@color/colorBlackText"
+            android:textColorHint="@color/colorLightGrayHint" />
 
         <TextView
             android:layout_width="match_parent"
@@ -51,7 +55,7 @@
             android:textAlignment="textEnd"/>
 
         <Button
-            android:id="@+id/loginTextFieldsLoginImageButton"
+            android:id="@+id/loginTextFieldsLoginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

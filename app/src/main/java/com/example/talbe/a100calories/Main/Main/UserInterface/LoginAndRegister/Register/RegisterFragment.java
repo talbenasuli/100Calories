@@ -8,12 +8,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.talbe.a100calories.Main.Main.Data.UserDetails;
+import com.example.talbe.a100calories.Main.Main.UserInterface.Common.ContainerActivity;
 import com.example.talbe.a100calories.Main.Main.UserInterface.Views.RegisterTextFields;
 import com.example.talbe.a100calories.R;
 
 public class RegisterFragment extends Fragment
-        implements RegisterTextFields.RegisterTextFieldsListener {
+        implements RegisterTextFields.RegisterTextFieldsListener, RegisterPresentor.RegisterPresentorListener {
 
     public static String TAG = "RegisterFragment";
     public static RegisterFragment newInstance() {
@@ -25,12 +28,14 @@ public class RegisterFragment extends Fragment
 
     private RegisterFragmentListener activityListener;
 
-    public interface RegisterFragmentListener {
+    public interface RegisterFragmentListener extends ContainerActivity.ContainerActivityInterface {
         void registerTextFieldsOnBack();
+        void moveToHome();
     }
 
     View registerView;
     RegisterTextFields registerTextFields;
+    RegisterPresentor presentor = new RegisterPresentor();
 
     @Override
     public void onAttach(Context context) {
@@ -48,6 +53,7 @@ public class RegisterFragment extends Fragment
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         registerView = inflater.inflate(R.layout.register_fragment, container, false);
+        presentor.setListener(this);
         return registerView;
     }
 
@@ -61,5 +67,23 @@ public class RegisterFragment extends Fragment
     @Override
     public void registerTextFieldsOnBack() {
         activityListener.registerTextFieldsOnBack();
+    }
+
+    @Override
+    public void registerTextFieldsOnRegister(UserDetails userDetails, String password) {
+        activityListener.showProgressBar();
+        presentor.onRegisterTapped(userDetails, password);
+    }
+
+    @Override
+    public void registerTextFieldOnFail(String message) {
+        activityListener.hideProgressBar();
+        Toast.makeText(getContext(),message,Toast.LENGTH_LONG);
+    }
+
+    @Override
+    public void moveToHome() {
+        activityListener.hideProgressBar();
+        activityListener.moveToHome();
     }
 }

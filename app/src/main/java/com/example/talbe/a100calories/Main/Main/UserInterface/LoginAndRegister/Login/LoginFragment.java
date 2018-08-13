@@ -10,12 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.Toast;
 
+import com.example.talbe.a100calories.Main.Main.Data.UserDetails;
+import com.example.talbe.a100calories.Main.Main.Models.Model;
+import com.example.talbe.a100calories.Main.Main.UserInterface.Common.ContainerActivity;
 import com.example.talbe.a100calories.Main.Main.UserInterface.Views.LoginTextFields;
 import com.example.talbe.a100calories.R;
 
 public class LoginFragment extends Fragment
-                           implements LoginTextFields.LoginTextFieldsListener {
+                           implements LoginTextFields.LoginTextFieldsListener, Model.LoginListener {
 
     public static String TAG = "LoginFragment";
     public static LoginFragment newInstance() {
@@ -26,12 +30,15 @@ public class LoginFragment extends Fragment
     }
 
     private LoginFragmentListener activityListener;
-    public interface LoginFragmentListener {
+
+    public interface LoginFragmentListener extends ContainerActivity.ContainerActivityInterface {
         void onNewAccountClicked();
+        void moveToHome();
     }
 
     // Parameters
     LoginTextFields loginTextFields;
+    LoginPresentor loginPresentor = new LoginPresentor();
 
     @Override
     public void onAttach(Context context) {
@@ -59,9 +66,27 @@ public class LoginFragment extends Fragment
         loginTextFields.setListener(this);
     }
 
-
     @Override
     public void onNewAccountClicked() {
         activityListener.onNewAccountClicked();
     }
+
+    @Override
+    public void onLoginClicked(String email, String password) {
+        activityListener.showProgressBar();
+        loginPresentor.onLogin(email, password, this);
+    }
+
+    @Override
+    public void onLoginComplete() {
+        activityListener.hideProgressBar();
+        activityListener.moveToHome();
+    }
+
+    @Override
+    public void onLoginError() {
+        String message = getResources().getString(R.string.login_fails_message);
+        Toast.makeText(getContext(),message , Toast.LENGTH_LONG);
+    }
+
 }

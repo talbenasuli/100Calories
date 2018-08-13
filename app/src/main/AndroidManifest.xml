@@ -10,15 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
-        <activity android:name=".Main.Main.MainActivity">
-        </activity>
-
         <activity android:name=".Main.Main.UserInterface.LoginAndRegister.LoginProcessAcitivity">
-        andrpid
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        </activity>
+
+        <activity android:name=".Main.Main.UserInterface.Feed.FeedActivity">
         </activity>
 
     </application>

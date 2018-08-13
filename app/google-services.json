@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "647810592589",
+    "firebase_url": "https://calories-8461f.firebaseio.com",
+    "project_id": "calories-8461f",
+    "storage_bucket": "calories-8461f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647810592589:android:25939f0db9e522e9",
+        "android_client_info": {
+          "package_name": "com.example.talbe.a100calories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647810592589-h072dptnkhivm7n520d4a9e416f556bd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talbe.a100calories",
+            "certificate_hash": "647dc9c0f005a7b79845b69efec12d8df19a7cbb"
+          }
+        },
+        {
+          "client_id": "647810592589-11bm904i4c9iukpt9d419kjqqnl2n07p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Sdvz3vbdvCJK68f1IPENISTTshVohuE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647810592589-11bm904i4c9iukpt9d419kjqqnl2n07p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

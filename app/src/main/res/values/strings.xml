@@ -11,5 +11,9 @@
     <string name="login">login</string>
     <string name="register">+ create account</string>
     <string name="registerBack"> &lt; back </string>
+    <string name="rePasswordFailMessage"> This is not the same password, please make sure you enter the password correctly </string>
+    <string name="emptyDetailsFailMessage"> Please fill all the details </string>
+    <string name="emailFailMessage"> Email is invalid </string>
+    <string name="login_fails_message"> login fail </string>
 
 </resources>

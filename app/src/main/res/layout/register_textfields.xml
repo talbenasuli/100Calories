@@ -17,37 +17,44 @@
         android:id="@+id/registerEmailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/login_textField_email_hint"
-        android:textColorHint="@color/colorLightGrayHint"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:hint="@string/login_textField_email_hint"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorBlackText"
+        android:textColorHint="@color/colorLightGrayHint" />
 
     <EditText
-    android:id="@+id/registerPasswordEditText"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/login_textField_password_hint"
-    android:textColorHint="@color/colorLightGrayHint"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginEnd="8dp" />
+        android:id="@+id/registerPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/login_textField_password_hint"
+        android:inputType="textPassword"
+        android:textColor="@color/colorBlackText"
+        android:textColorHint="@color/colorLightGrayHint" />
 
     <EditText
         android:id="@+id/registerRePasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/register_textField_re_password_hint"
-        android:textColorHint="@color/colorLightGrayHint"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/register_textField_re_password_hint"
+        android:inputType="textPassword"
+        android:textColor="@color/colorBlackText"
+        android:textColorHint="@color/colorLightGrayHint" />
 
     <EditText
         android:id="@+id/registerName"
+        android:textColor="@color/colorBlackText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/register_textField_name_hint"
@@ -59,6 +66,7 @@
 
     <EditText
         android:id="@+id/registerLastName"
+        android:textColor="@color/colorBlackText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/register_textField_lastname_hint"
@@ -72,15 +80,17 @@
         android:id="@+id/registerWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/register_textField_Weight_hint"
-        android:textColorHint="@color/colorLightGrayHint"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/register_textField_Weight_hint"
+        android:inputType="numberDecimal"
+        android:textColor="@color/colorBlackText"
+        android:textColorHint="@color/colorLightGrayHint" />
 
     <Button
-        android:id="@+id/registerTextFieldsLoginImageButton"
+        android:id="@+id/registerTextFieldsregisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
